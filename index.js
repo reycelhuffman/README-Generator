@@ -1,37 +1,59 @@
 // TODO: Include packages needed for this application
-
+const inquirer = require("inquirer")
+const fs = require("fs")
 
 
 // TODO: Create an array of questions for user input
-const questions = require(questions);
-    const fs = [];
-
-    const questions = [
-        {
+inquirer
+.prompt([
+    {
+        type: 'input',
+        name: 'title',
+        message: "Title of your project",
+        },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'What is this project about?',
+        },
+    {
             type: 'input',
-            name: 'tvShow',
-            message: "What's your favorite TV show?",
+            name: 'motivation',
+            message: 'What was your motivation?',
         },
-        {
-            type: 'confirm',
-            name: 'askAgain',
-            message: 'Want to enter another TV show favorite (just hit enter for YES)?',
-            default: true,
+    {
+            type: 'input',
+            name: 'projectReasoning',
+            message: 'Why did you build this project?',
         },
-    ];
-
-    function ask() {
-        inquirer.prompt(questions).then((answers) => {
-            output.push(answers.tvShow);
-            if (answers.askAgain) {
-                ask();
-            } else {
-                console.log('Your favorite TV Shows:', output.join(', '));
-            }
-        });
+    {
+            type: 'input',
+            name: 'solve',
+            message: 'What problem does it solve?',
+        },  
+    {
+            type: 'input',
+            name: 'learn',
+            message: 'What did you learn?',
+        },
+    ]);
+    .then((response) => {
+        console.log(response);
+        let text = `## ${response.title}
+        ## ${response.description}
+        ## ${response.motivation}
+        ## ${response.projectReasoning}
+        ## ${response.solve}
+        ## ${response.learn}
+        
+        ${generateText(response)}`
+        ;
+        fs.writeFile("README.md", text, (err) =>
+        err ? console.error(err) : console.log('Success!'))
     }
 
-    ask();
+    );
+
 
     // TODO: Create a function to write README file
     // function writeToFile(fileName, data) { }
