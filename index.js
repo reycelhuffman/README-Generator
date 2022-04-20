@@ -33,14 +33,16 @@ inquirer
                 message: 'List your collaborators',
             },  
         {
-                type: 'input',
+                type: 'checkbox',
                 name: 'license',
                 message: 'List of license',
-            },
-        {
-                type: 'input',
-                name: 'badges',
-                message: 'List of badges',
+                choices: [
+                    'MIT',
+                    'IBM',
+                    'Mozilla',
+                    'Perl',
+                    'SIL',
+                ]
             },
         {
                 type: 'input',
@@ -62,9 +64,14 @@ inquirer
 
 .then((response) => {
     console.log(response);
-    let text = `## title
-${response.Title}
-## decription: 
+    let badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)` 
+    let badge2 = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+    let badge3 = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+    let badge4 = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)`
+    let badge5 = `[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)`
+    console.log(typeof response.description)
+    let text = `## title ${response.Title}
+## description: 
 ${response.description}
 ## installation:
     ${response.installation}
@@ -72,20 +79,24 @@ ${response.description}
     ${response.usage}
 ## credits:
     ${response.credits}
-## license:
+## license: 
+${badge}
+${badge2}
+${badge3}
+${badge4}
+${badge5}
     ${response.license}
-## badges:
-    ${response.badges}
 ## feature:
     ${response.feature}
 ## contribute:
     ${response.contribute}
 ## test:
+![alt text](${response.test}?raw=true)
     ${response.test}
+
     
 `
-
-        ;
+;
     fs.writeFile("README.md", text, (err) =>
     err ? console.error(err) : console.log('Success!'))
 }
