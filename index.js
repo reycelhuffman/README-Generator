@@ -9,11 +9,6 @@ inquirer
         
         {
             type: 'input',
-            name: 'Video',
-            message: 'Run test on your application, make a video of you testing your App',
-        },
-        {
-            type: 'input',
             name: 'Title',
             message: "Title of your project",
             },
