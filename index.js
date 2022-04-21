@@ -9,32 +9,37 @@ inquirer
         
         {
             type: 'input',
-            name: 'title',
+            name: 'Video',
+            message: 'Run test on your application, make a video of you testing your App',
+        },
+        {
+            type: 'input',
+            name: 'Title',
             message: "Title of your project",
             },
         {
             type: 'input',
-            name: 'description',
+            name: 'Description',
             message: "What is this project about? What was your motivation? What did you learn?",
             },
         {
                 type: 'input',
-                name: 'installation',
+                name: 'Installation',
                 message: 'What are the steps required to install your project?',
             },
         {
                 type: 'input',
-                name: 'usage',
+                name: 'Usage',
                 message: 'Provide instruction and examples for use',
             },
         {
                 type: 'input',
-                name: 'credits',
+                name: 'Credits',
                 message: 'List your collaborators',
             },  
         {
                 type: 'checkbox',
-                name: 'license',
+                name: 'License',
                 message: 'List of license',
                 choices: [
                     'MIT',
@@ -46,19 +51,10 @@ inquirer
             },
         {
                 type: 'input',
-                name: 'feature',
-                message: 'List of features',
-            },
-        {
-                type: 'input',
-                name: 'contribute',
+                name: 'Contribute',
                 message: 'Create application or package you would like to develop',
             },
-        {
-                type: 'input',
-                name: 'test',
-                message: 'Run test on your application, make a video of you testing your App',
-            },
+        
 
 ])
 
@@ -70,29 +66,27 @@ inquirer
     let badge4 = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)`
     let badge5 = `[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)`
     console.log(typeof response.description)
-    let text = `## title ${response.Title}
-## description: 
-${response.description}
-## installation:
-    ${response.installation}
-## usage:
-    ${response.usage}
-## credits:
-    ${response.credits}
-## license: 
+    let text = `## Video:
+    ![alt text](${response.test}?raw=true)
+    ${response.test}
+## Title ${response.Title}
+## Description: 
+${response.Description}
+## Installation:
+    ${response.Installation}
+## Usage:
+    ${response.Usage}
+## Credits:
+    ${response.Credits}
+## License: 
 ${badge}
 ${badge2}
 ${badge3}
 ${badge4}
 ${badge5}
-    ${response.license}
-## feature:
-    ${response.feature}
-## contribute:
-    ${response.contribute}
-## test:
-![alt text](${response.test}?raw=true)
-    ${response.test}
+    ${response.License}
+## Contribute:
+    ${response.Contribute}
 
     
 `
@@ -103,23 +97,3 @@ ${badge5}
 
 );
 
-
-    // TODO: Create a function to write README file
-    // function writeToFile(fileName, data) { }
-    // FileSystem.writeToFile('README.md', `
-    // # READ ME Generator
-    // ![GitHub license](https:)
-    
-    // ## Description
-    
-    // lorem ipsum
-    
-    // ## Table of Contents 
-    
-    
-    // ` , (err) =>
-    // // TODO: Create a function to initialize app
-    // function init() { }
-
-    // // Function call to initialize app
-    // init();
