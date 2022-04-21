@@ -80,11 +80,11 @@ ${response.description}
 ## Video: 
 ![alt text](${response.video}?raw=true)
 ## Installation:
-    ${response.installation}
+${response.installation}
 ## Usage:
-    ${response.usage}
+${response.usage}
 ## Credits:
-    ${response.credits}
+${response.credits}
 ## License: 
 ${badge}
 ${badge2}

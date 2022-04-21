@@ -6,10 +6,10 @@ This project is about generating a README for user's to use in their current pro
 ![alt text](asset/screenshot.png?raw=true)
 ## Video: 
 ![alt text](asset/Animation.gif?raw=true)
-## Installation
-    User's need to make sure they have a copy or clone of my repository from GitHub and with that they can change their prompt and make it their own. 
-## Usage
-    User's need to make sure they type the following into their terminal: npm init -y enter and then npm i inquirer enter . This makes sure your node is ready to run so then later user's would be prompted with the questions that will later print out on the README file.
+## Installation:
+User's need to make sure they have a copy or clone of my repository from GitHub and with that they can change their prompt and make it their own. 
+## Usage:
+User's need to make sure they type the following into their terminal: npm init -y enter and then npm i inquirer enter . This makes sure your node is ready to run so then later user's would be prompted with the questions that will later print out on the README file.
 ## Credits:
     GitHub, mdn, npm
 ## License: 
