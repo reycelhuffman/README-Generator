@@ -11,7 +11,7 @@ User's need to make sure they have a copy or clone of my repository from GitHub 
 ## Usage:
 User's need to make sure they type the following into their terminal: npm init -y enter and then npm i inquirer enter . This makes sure your node is ready to run so then later user's would be prompted with the questions that will later print out on the README file.
 ## Credits:
-    GitHub, mdn, npm
+    GitHub, mdn, npm, Joshua Christianson,  Reniel Christianson, Andrew Layandecker and Dane Edwards
 ## License: 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
