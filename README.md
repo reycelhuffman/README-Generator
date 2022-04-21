@@ -3,9 +3,9 @@
 ## Description: 
 This project is about generating a README for user's to use in their current project. My motivation was that this README generator will make it easier for user to create their own since they will be provided with examples of prompt and codes on how to do it. I learned that by using node making a README can be an easy thing to do. 
 ## Image:
-![alt text](/Develop/asset/screenshot.png?raw=true)
+![alt text](asset/screenshot.png?raw=true)
 ## Video: 
-![alt text](/Develop/asset/Animation.gif?raw=true)
+![alt text](asset/Animation.gif?raw=true)
 ## Installation:
     User's need to make sure they have a copy or clone of my repository from GitHub and with that they can change their prompt and make it their own. 
 ## Usage:
