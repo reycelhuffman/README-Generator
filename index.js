@@ -9,32 +9,42 @@ inquirer
         
         {
             type: 'input',
-            name: 'Title',
+            name: 'title',
             message: "Title of your project",
             },
         {
+                type: 'input',
+                name: 'image',
+                message: "Insert image here",
+                },
+        {
+                    type: 'input',
+                    name: 'video',
+                    message: "Insert video here",
+                },
+        {
             type: 'input',
-            name: 'Description',
+            name: 'description',
             message: "What is this project about? What was your motivation? What did you learn?",
             },
         {
                 type: 'input',
-                name: 'Installation',
+                name: 'installation',
                 message: 'What are the steps required to install your project?',
             },
         {
                 type: 'input',
-                name: 'Usage',
-                message: 'Provide instruction and examples for use',
+                name: 'usage',
+                message: 'Provide instruction for project',
             },
         {
                 type: 'input',
-                name: 'Credits',
+                name: 'credits',
                 message: 'List your collaborators',
             },  
         {
                 type: 'checkbox',
-                name: 'License',
+                name: 'license',
                 message: 'List of license',
                 choices: [
                     'MIT',
@@ -46,8 +56,8 @@ inquirer
             },
         {
                 type: 'input',
-                name: 'Contribute',
-                message: 'Create application or package you would like to develop',
+                name: 'contribute',
+                message: 'How can I develop my app?',
             },
         
 
@@ -58,30 +68,32 @@ inquirer
     let badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)` 
     let badge2 = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
     let badge3 = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
-    let badge4 = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)`
+    let badge4 = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0`
     let badge5 = `[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)`
     console.log(typeof response.description)
-    let text = `## Video:
-    ![alt text](${response.test}?raw=true)
-    ${response.test}
-## Title ${response.Title}
+    let text = `
+## Title ${response.title}
 ## Description: 
-${response.Description}
+${response.description}
+## Image:
+![alt text](${response.image}?raw=true)
+## Video: 
+![alt text](${response.video}?raw=true)
 ## Installation:
-    ${response.Installation}
+    ${response.installation}
 ## Usage:
-    ${response.Usage}
+    ${response.usage}
 ## Credits:
-    ${response.Credits}
+    ${response.credits}
 ## License: 
 ${badge}
 ${badge2}
 ${badge3}
 ${badge4}
 ${badge5}
-    ${response.License}
+${response.license}
 ## Contribute:
-    ${response.Contribute}
+    ${response.contribute}
 
     
 `
